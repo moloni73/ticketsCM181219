@@ -5,6 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Calendar } from "./views/calendar";
 import { Event } from "./views/event";
+import { EventsThumbnails } from "./views/eventsthumb";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -25,6 +26,7 @@ export const Layout = () => {
 						<Route exact path="/" component={Home} />
 						<Route path="/event" component={Event} />
 						<Route path="/calendar" component={Calendar} />
+						<Route path="/eventscat" component={EventsThumbnails} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
