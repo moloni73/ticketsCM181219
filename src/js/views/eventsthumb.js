@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 
 export const EventsThumbnails = () => {
 	return (
@@ -17,96 +19,145 @@ export const EventsThumbnails = () => {
 				<div className="col-2 bg-light">
 					<h2>Filtros</h2>
 					<br />
-					<h4>Region</h4>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Aisén del G. Carlos Ibáñez del Campo</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Antofagasta</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Arica y Parinacota</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Atacama</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Biobío</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Coquimbo</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">La Araucanía</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Libertador General Bernardo O’Higgins</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Los Lagos</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Los Ríos</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Magallanes y de la Antártica Chilena</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Maule</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Metropolitana de Santiago</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Ñuble</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Tarapacá</label>
-					</div>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Valparaíso</label>
-					</div>
-					<br />
-					<h4>Categoria</h4>
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Musica</label>
-					</div>{" "}
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Deportes</label>
-					</div>{" "}
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Teatro y Cine</label>
-					</div>{" "}
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Otros</label>
-					</div>{" "}
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Danza</label>
-					</div>{" "}
-					<div className="form-check ml-2">
-						<input className="form-check-input" type="checkbox" value="" />
-						<label className="form-check-label">Infantil</label>
+					<div className="accordion" id="accordionExample">
+						<div className="card">
+							<div className="card-header" id="headingOne">
+								<h2 className="mb-0">
+									<button
+										className="btn btn-link"
+										type="button"
+										data-toggle="collapse"
+										data-target="#collapseOne"
+										aria-expanded="true"
+										aria-controls="collapseOne">
+										Region
+									</button>
+								</h2>
+							</div>
+
+							<div
+								id="collapseOne"
+								className="collapse show"
+								aria-labelledby="headingOne"
+								data-parent="#accordionExample">
+								<div className="card-body">
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Aisén del G. Carlos Ibáñez del Campo</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Antofagasta</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Arica y Parinacota</label>
+									</div>
+
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Atacama</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Biobío</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Coquimbo</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">La Araucanía</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">
+											Libertador General Bernardo O’Higgins
+										</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Los Lagos</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Los Ríos</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Magallanes y de la Antártica Chilena</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Maule</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Metropolitana de Santiago</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Ñuble</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Tarapacá</label>
+									</div>
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Valparaíso</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="card">
+							<div className="card-header" id="headingTwo">
+								<h2 className="mb-0">
+									<button
+										className="btn btn-link collapsed"
+										type="button"
+										data-toggle="collapse"
+										data-target="#collapseTwo"
+										aria-expanded="false"
+										aria-controls="collapseTwo">
+										Categoria
+									</button>
+								</h2>
+							</div>
+							<div
+								id="collapseTwo"
+								className="collapse"
+								aria-labelledby="headingTwo"
+								data-parent="#accordionExample">
+								<div className="card-body">
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Musica</label>
+									</div>{" "}
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Deportes</label>
+									</div>{" "}
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Teatro y Cine</label>
+									</div>{" "}
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Otros</label>
+									</div>{" "}
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Danza</label>
+									</div>{" "}
+									<div className="form-check ml-2">
+										<input className="form-check-input" type="checkbox" value="" />
+										<label className="form-check-label">Infantil</label>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="row col-10 float-right">
@@ -119,7 +170,7 @@ export const EventsThumbnails = () => {
 								</div>
 								<div className="card-footer">
 									<small className="text-muted">Musica</small>
-									<small>Add</small>
+									<FontAwesomeIcon icon={faPlusSquare} />
 								</div>
 							</div>
 						</Link>
