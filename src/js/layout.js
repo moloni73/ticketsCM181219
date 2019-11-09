@@ -22,8 +22,8 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Event} />
-						<Route path="/home" component={Home} />
+						<Route exact path="/" component={Home} />
+						<Route path="/event" component={Event} />
 						<Route path="/calendar" component={Calendar} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>

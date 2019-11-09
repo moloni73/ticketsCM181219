@@ -13,7 +13,7 @@ export const Home = () => (
 			<div className="row">
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
@@ -23,7 +23,7 @@ export const Home = () => (
 				</div>
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
@@ -33,7 +33,7 @@ export const Home = () => (
 				</div>
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
@@ -45,7 +45,7 @@ export const Home = () => (
 			<div className="row">
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
@@ -55,7 +55,7 @@ export const Home = () => (
 				</div>
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
@@ -65,7 +65,7 @@ export const Home = () => (
 				</div>
 				<div className="col-4">
 					<div className="card" style={{ width: 18 + "rem" }}>
-						<Link to="/">
+						<Link to="/event">
 							<img src="" className="card-img-top" alt="" />
 						</Link>
 						<div className="card-body">
