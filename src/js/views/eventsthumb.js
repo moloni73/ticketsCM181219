@@ -115,10 +115,11 @@ export const EventsThumbnails = () => {
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
-									<h5 className="card-title">Card title</h5>
+									<h5 className="card-title">Concierto de Primavera</h5>
 								</div>
 								<div className="card-footer">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Musica</small>
+									<small>Add</small>
 								</div>
 							</div>
 						</Link>
