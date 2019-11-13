@@ -10,29 +10,16 @@ export const Event = () => {
 		<div className="container-fluid">
 			<div className="row">
 				<div className="col-6">
-					<div className="container">
-						<div className="card bg-dark text-white">
-							<img src={eventMusicImg} className="card-img" alt="..." />
-							<div className="card-img-overlay justify-content-end">
-								<div className="row">
-									<div className="col-2 align-self-start">
-										<span aria-hidden="true"> BOTON1 </span>
-									</div>
-								</div>
-								<div className="row">
-									<div className="col-2 align-self-center">
-										<span aria-hidden="true"> BOTON2 </span>
-									</div>
-									<div className="row justify-content-end">
-										<div className="col-2 align-self-end">
-											<button
-												type="button"
-												className="close"
-												data-dismiss="alert"
-												aria-label="Close">
-												<span aria-hidden="true">AddMyCalendar</span>
-											</button>
-										</div>
+					<div className="card bg-dark text-white">
+						<img src={eventMusicImg} className="card-img" alt="..." />
+						<div className="card-img-overlay d-flex flex-column justify-content-end">
+							<div className="container">
+								<div className="row justify-content-end">
+									<div className="col align-self-end">
+										<button type="button" className="btn btn-warning">
+											<i className="fa fa-calendar" aria-hidden="true" />
+											AddMyCalendar
+										</button>
 									</div>
 								</div>
 							</div>
@@ -106,7 +93,7 @@ export const Event = () => {
 								id="pills-contact"
 								role="tabpanel"
 								aria-labelledby="pills-contact-tab">
-								En boletreías, obvio
+								En boleterías, obvio
 							</div>
 						</div>
 					</div>
