@@ -15,7 +15,8 @@ export const Event = () => {
 						<div className="card-img-overlay d-flex flex-column justify-content-end">
 							<div className="container">
 								<div className="row justify-content-end">
-									<div className="col align-self-end">
+									<div className="col-9" />
+									<div className="col-3 align-self-end">
 										<button type="button" className="btn btn-warning">
 											<i className="fa fa-calendar" aria-hidden="true" />
 											AddMyCalendar
