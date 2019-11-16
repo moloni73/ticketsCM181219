@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.scss";
+import { Context } from "../store/appContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
 
 export const EventsThumbnails = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div>
 			<div className="row justify-content-center">
@@ -41,73 +44,14 @@ export const EventsThumbnails = () => {
 								aria-labelledby="headingOne"
 								data-parent="#accordionExample">
 								<div className="card-body">
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Aisén del G. Carlos Ibáñez del Campo</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Antofagasta</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Arica y Parinacota</label>
-									</div>
-
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Atacama</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Biobío</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Coquimbo</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">La Araucanía</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">
-											Libertador General Bernardo O’Higgins
-										</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Los Lagos</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Los Ríos</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Magallanes y de la Antártica Chilena</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Maule</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Metropolitana de Santiago</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Ñuble</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Tarapacá</label>
-									</div>
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Valparaíso</label>
-									</div>
+									{store.region.map((item, index) => {
+										return (
+											<div className="form-check ml-2" key={index}>
+												<input className="form-check-input" type="checkbox" value="" />
+												<label className="form-check-label">{item.nombre}</label>
+											</div>
+										);
+									})}
 								</div>
 							</div>
 						</div>
@@ -131,30 +75,14 @@ export const EventsThumbnails = () => {
 								aria-labelledby="headingTwo"
 								data-parent="#accordionExample">
 								<div className="card-body">
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Musica</label>
-									</div>{" "}
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Deportes</label>
-									</div>{" "}
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Teatro y Cine</label>
-									</div>{" "}
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Otros</label>
-									</div>{" "}
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Danza</label>
-									</div>{" "}
-									<div className="form-check ml-2">
-										<input className="form-check-input" type="checkbox" value="" />
-										<label className="form-check-label">Infantil</label>
-									</div>
+									{store.categoria.map((item, index) => {
+										return (
+											<div className="form-check ml-2" key={index}>
+												<input className="form-check-input" type="checkbox" value="" />
+												<label className="form-check-label">{item}</label>
+											</div>
+										);
+									})}
 								</div>
 							</div>
 						</div>

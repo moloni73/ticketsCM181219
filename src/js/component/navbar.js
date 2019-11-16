@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+{
+	/*import "../../styles/modal.scss";*/
+}
+
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
@@ -11,6 +15,106 @@ export const Navbar = () => {
 				<Link to="/calendar">
 					<button className="btn btn-success btn-lg">Calendar</button>
 				</Link>
+			</div>
+			<div className="ml-auto">
+				<button className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					Login
+				</button>
+
+				<div
+					className="modal fade"
+					id="exampleModalCenter"
+					tabIndex="-1"
+					role="dialog"
+					aria-labelledby="exampleModalCenterTitle"
+					aria-hidden="true">
+					<div className="modal-dialog modal-lg modal-dialog-centered" role="document">
+						<div className="modal-content">
+							<div className="modal-header">
+								<h5 className="modal-title" id="exampleModalCenterTitle">
+									Login with Social Media or Manually
+								</h5>
+								<button type="button" className="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div className="modal-body">
+								{/*aca comienza el codigo insertado*/}
+								<div className="container">
+									<form>
+										<div className="row">
+											<div className="vl">
+												<span className="vl-innertext">or</span>
+											</div>
+
+											<div className="col">
+												<a href="#" className="fb btn">
+													<i className="fa fa-facebook fa-fw" /> Login with Facebook
+												</a>
+												<a href="#" className="twitter btn">
+													<i className="fa fa-twitter fa-fw" /> Login with Twitter
+												</a>
+												<a href="#" className="google btn">
+													<i className="fa fa-google fa-fw" /> Login with Google+
+												</a>
+											</div>
+
+											<div className="col">
+												<div className="hide-md-lg">
+													<p>Or sign in manually:</p>
+												</div>
+
+												<input
+													className="input"
+													type="text"
+													name="username"
+													placeholder="Username"
+													required
+												/>
+												<input
+													className="input"
+													type="password"
+													name="password"
+													placeholder="Password"
+													required
+												/>
+												<input type="submit" value="Login" />
+											</div>
+										</div>
+									</form>
+								</div>
+								{/*aca termina*/}
+							</div>
+							{/*aca empieza*/}
+							<div className="bottom-container">
+								<div className="row">
+									<div className="col">
+										<Link to="/register">
+											<a style={{ color: "white" }} className="btn">
+												Registrate
+											</a>
+										</Link>
+									</div>
+									<div className="col">
+										<div style={{ color: "white" }} className="btn">
+											Forgot password?
+										</div>
+									</div>
+								</div>
+							</div>
+							{/*aca termina*/}
+
+							{/*<div className="modal-footer">
+									<button type="button" className="btn btn-secondary" data-dismiss="modal">
+										Close
+									</button>
+									<button type="button" className="btn btn-primary">
+										Save changes
+									</button>
+    </div>*/}
+						</div>
+					</div>
+				</div>
 			</div>
 			<div className="ml-auto">
 				<Link to="/profile">

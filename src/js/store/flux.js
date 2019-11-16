@@ -12,6 +12,73 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
+			],
+			categoria: ["Musica", "Deportes", "Teatro y Cine", "Otros", "Danza", "Infantil"],
+			region: [
+				{
+					nombre: "Aisén del G. Carlos Ibáñez del Campo",
+					numero: "XI"
+				},
+				{
+					nombre: "Antofagasta",
+					numero: "II"
+				},
+				{
+					nombre: "Arica y Parinacota",
+					numero: "XV"
+				},
+				{
+					nombre: "Atacama",
+					numero: "III"
+				},
+				{
+					nombre: "Biobío",
+					numero: "VIII"
+				},
+				{
+					nombre: "Coquimbo",
+					numero: "IV"
+				},
+				{
+					nombre: "La Araucanía",
+					numero: "IX"
+				},
+				{
+					nombre: "Libertador General Bernardo O’Higgins",
+					numero: "VI"
+				},
+				{
+					nombre: "Los Lagos",
+					numero: "X"
+				},
+				{
+					nombre: "Los Ríos",
+					numero: "XIV"
+				},
+				{
+					nombre: "Magallanes y de la Antártica Chilena",
+					numero: "XII"
+				},
+				{
+					nombre: "Maule",
+					numero: "VII"
+				},
+				{
+					nombre: "Metropolitana de Santiago",
+					numero: "RM"
+				},
+				{
+					nombre: "Ñuble",
+					numero: "XVI"
+				},
+				{
+					nombre: "Tarapacá",
+					numero: "I"
+				},
+				{
+					nombre: "Valparaíso",
+					numero: "V"
+				}
 			]
 		},
 		actions: {

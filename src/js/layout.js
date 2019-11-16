@@ -10,6 +10,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { Register } from "./views/register";
 
 //create your first component
 export const Layout = () => {
@@ -27,6 +28,7 @@ export const Layout = () => {
 						<Route path="/event" component={Event} />
 						<Route path="/calendar" component={Calendar} />
 						<Route path="/eventscat" component={EventsThumbnails} />
+						<Route path="/register" component={Register} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
