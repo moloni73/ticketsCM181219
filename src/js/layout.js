@@ -6,11 +6,13 @@ import { Home } from "./views/home";
 import { Calendar } from "./views/calendar";
 import { Event } from "./views/event";
 import { EventsThumbnails } from "./views/eventsthumb";
+import { Register } from "./views/register";
+import { Profile } from "./views/profile";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Register } from "./views/register";
 
 //create your first component
 export const Layout = () => {
@@ -29,6 +31,7 @@ export const Layout = () => {
 						<Route path="/calendar" component={Calendar} />
 						<Route path="/eventscat" component={EventsThumbnails} />
 						<Route path="/register" component={Register} />
+						<Route path="/profile" component={Profile} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
