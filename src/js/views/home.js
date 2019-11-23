@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import exampleMap from "../../img/Map.png";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -9,8 +10,8 @@ export const Home = () => {
 	return (
 		<div>
 			<div className="container">
-				<div className="jumbotron">
-					<h1 className="display-4 center">Here goes the EventMap</h1>
+				<div className="jumbotron d-flex justify-content-center p-0">
+					<img src={exampleMap} className="w-75 " />
 				</div>
 			</div>
 			<div className="container">

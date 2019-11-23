@@ -4,18 +4,28 @@ import "../../styles/home.scss";
 import { Context } from "../store/appContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from "@fortawesome/free-regular-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export const EventsThumbnails = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div>
-			<div className="row justify-content-center">
-				<input
-					className="form-control mb-3 col-8"
-					type="text"
-					placeholder="Te ayudo a encontrar tu destino..."
-				/>
+			<div className="row justify-content-right">
+				<div className="input-group mb-3 col-10 ">
+					<div className="input-group-prepend">
+						<span className="input-group-text" id="basic-addon1">
+							<FontAwesomeIcon icon={faSearch} />
+						</span>
+					</div>
+					<input
+						type="text"
+						className="form-control"
+						placeholder="Te ayudo a encontrar tu destino..."
+						aria-label="Username"
+						aria-describedby="basic-addon1"
+					/>
+				</div>
 			</div>
 
 			<div className="row">

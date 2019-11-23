@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-import "../../styles/modal.scss";
+{
+	/*import "../../styles/modal.scss";*/
+}
 
 export const Navbar = () => {
 	return (
@@ -13,7 +15,7 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<Link to="/calendar">
-					<button className="btn btn-success btn-lg">Calendar</button>
+					<button className="btn btn-success btn-lg">Mi Agenda</button>
 				</Link>
 			</div>
 			<div className="ml-auto">
@@ -82,7 +84,7 @@ export const Navbar = () => {
 							{/*aca empieza*/}
 							<div className="bottom-container">
 								<div className="row">
-									<div className="col">
+									<div className="col" data-dismiss="modal">
 										<Link to="/register">
 											<a style={{ color: "white" }} className="btn">
 												Registrate
