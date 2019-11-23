@@ -90,7 +90,7 @@ export const EventsThumbnails = () => {
 				</div>
 				<div className="row col-10 float-right">
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -104,7 +104,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -117,7 +117,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -130,7 +130,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -143,7 +143,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -156,7 +156,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -169,7 +169,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -182,7 +182,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -195,7 +195,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -208,7 +208,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -221,7 +221,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -234,7 +234,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">
@@ -247,7 +247,7 @@ export const EventsThumbnails = () => {
 						</Link>
 					</div>{" "}
 					<div className="col-2 mb-4">
-						<Link to="/event" className="text-decoration-none">
+						<Link to="/events-category/event" className="text-decoration-none">
 							<div className="card">
 								<img src="https://via.placeholder.com/140x100" className="card-img-top" alt="..." />
 								<div className="card-body">

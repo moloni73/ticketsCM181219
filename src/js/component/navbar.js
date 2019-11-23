@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-{
-	/*import "../../styles/modal.scss";*/
-}
+import "../../styles/modal.scss";
 
 export const Navbar = () => {
 	return (
@@ -40,7 +40,7 @@ export const Navbar = () => {
 							</div>
 							<div className="modal-body">
 								{/*aca comienza el codigo insertado*/}
-								<div className="container">
+								<div className="container mybackground">
 									<form>
 										<div className="row">
 											<div className="vl">
@@ -49,13 +49,7 @@ export const Navbar = () => {
 
 											<div className="col">
 												<a href="#" className="fb btn">
-													<i className="fa fa-facebook fa-fw" /> Login with Facebook
-												</a>
-												<a href="#" className="twitter btn">
-													<i className="fa fa-twitter fa-fw" /> Login with Twitter
-												</a>
-												<a href="#" className="google btn">
-													<i className="fa fa-google fa-fw" /> Login with Google+
+													<FontAwesomeIcon icon={faFacebook} /> Login with Facebook
 												</a>
 											</div>
 

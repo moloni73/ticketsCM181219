@@ -19,7 +19,7 @@ export const Home = () => {
 						return (
 							<div className="col-4" key={index}>
 								<div className="card" style={{ width: 18 + "rem" }}>
-									<Link to="/eventscat" className="text-decoration-none">
+									<Link to="/events-category" className="text-decoration-none">
 										<img src="" className="card-img-top" alt="" />
 
 										<div className="card-body">
