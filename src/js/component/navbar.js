@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
-{
-	/*import "../../styles/modal.scss";*/
-}
+import "../../styles/modal.scss";
 
 export const Navbar = () => {
 	return (
@@ -34,7 +32,7 @@ export const Navbar = () => {
 						<div className="modal-content">
 							<div className="modal-header">
 								<h5 className="modal-title" id="exampleModalCenterTitle">
-									Login with Social Media or Manually
+									Selecciona tu metodo de ingreso
 								</h5>
 								<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
@@ -44,34 +42,34 @@ export const Navbar = () => {
 								{/*aca comienza el codigo insertado*/}
 								<div className="container mybackground">
 									<form>
-										<div className="row">
+										<div className="row logrow">
 											<div className="vl">
-												<span className="vl-innertext">or</span>
+												<span className="vl-innertext">o</span>
 											</div>
 
-											<div className="col">
+											<div className="col logcol">
 												<a href="#" className="fb btn">
-													<FontAwesomeIcon icon={faFacebook} /> Login with Facebook
+													<FontAwesomeIcon icon={faFacebook} /> Ingresa con Facebook
 												</a>
 											</div>
 
-											<div className="col">
+											<div className="col logcol">
 												<div className="hide-md-lg">
-													<p>Or sign in manually:</p>
+													<p>Ingresa con YoVoy!</p>
 												</div>
 
 												<input
-													className="input"
+													className="input myinput"
 													type="text"
 													name="username"
-													placeholder="Username"
+													placeholder="Email"
 													required
 												/>
 												<input
-													className="input"
+													className="input myinput"
 													type="password"
 													name="password"
-													placeholder="Password"
+													placeholder="Contraseña"
 													required
 												/>
 												<input type="submit" value="Login" />
@@ -84,7 +82,7 @@ export const Navbar = () => {
 							{/*aca empieza*/}
 							<div className="bottom-container">
 								<div className="row">
-									<div className="col" data-dismiss="modal">
+									<div className="col">
 										<Link to="/register">
 											<a style={{ color: "white" }} className="btn">
 												Registrate
@@ -93,7 +91,7 @@ export const Navbar = () => {
 									</div>
 									<div className="col">
 										<div style={{ color: "white" }} className="btn">
-											Forgot password?
+											¿Olvidaste tu Contraseña?
 										</div>
 									</div>
 								</div>
