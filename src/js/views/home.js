@@ -3,6 +3,7 @@ import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import exampleMap from "../../img/Map.png";
+import App from "../component/mapApp.js";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -11,7 +12,10 @@ export const Home = () => {
 		<div>
 			<div className="container">
 				<div className="jumbotron d-flex justify-content-center p-0">
-					<img src={exampleMap} className="w-75 " />
+					<h1 className="display-4 center">
+						{" "}
+						<App />{" "}
+					</h1>
 				</div>
 			</div>
 			<div className="container">
