@@ -16,6 +16,7 @@ export const Navbar = () => {
 					<button className="btn btn-success btn-lg">Mi Agenda</button>
 				</Link>
 			</div>
+
 			<div className="ml-auto">
 				<button className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
 					Login
@@ -90,7 +91,7 @@ export const Navbar = () => {
 										</Link>
 									</div>
 									<div className="col">
-										<div style={{ color: "white" }} className="btn">
+										<div style={{ color: "white" }} className="btn" data-toggle="modal">
 											¿Olvidaste tu Contraseña?
 										</div>
 									</div>
