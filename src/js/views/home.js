@@ -4,21 +4,20 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import exampleMap from "../../img/Map.png";
 import App from "../component/mapApp.js";
+import loginButton from "../component/loginbutton.js";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div>
-			<div className="container">
-				<div className="jumbotron d-flex justify-content-center p-0">
-					<h1 className="display-4 center">
-						{" "}
-						<App />{" "}
-					</h1>
+			<div className="container mb-3 d-flex justify-content-center">
+				<App />{" "}
+				<div>
+					<loginButton />
 				</div>
 			</div>
-			<div className="container">
+			<div className="container d-flex justify-content-center">
 				<div className="row">
 					{store.categoria.map((item, index) => {
 						return (

@@ -6,11 +6,9 @@ export const loginButton = () => {
 
 	return (
 		<div className="ml-auto">
-			<Link to="/profile">
-				<button type="button" className="btn btn-danger">
-					{logged ? "Logout" : "Login"}
-				</button>
-			</Link>
+			<button type="button" className="btn btn-danger">
+				{logged ? "Logout" : "Login"}
+			</button>
 		</div>
 	);
 
