@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 
-			usuarioconectado: [{ conectado: true }],
+			usuarioconectado: [1],
 
 			userLogin: [{ email: "" }],
 			userPass: [{ pass: "" }],

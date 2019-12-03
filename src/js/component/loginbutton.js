@@ -1,31 +1,35 @@
-import React, { Component } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
+import { LoginForm } from "./LoginForm";
+import { Context } from "../store/appContext";
 
-export const loginButton = () => {
-	const logged = true;
+export const LoginButton = () => {
+	const logged = false;
 
-	return (
-		<div className="ml-auto">
-			<button type="button" className="btn btn-danger">
-				{logged ? "Logout" : "Login"}
-			</button>
-		</div>
-	);
+	const { store, actions } = useContext(Context);
 
-	// if (store.usuarioconectado) {
-
-	// 	return (
-
-	// 	);
-	// } else {
-	// 	return (
-	// 		<div className="ml-auto">
-	// 			<Link to="/profile">
-	// 				<button type="button" className="btn btn-success">
-	// 					Login
-	// 				</button>
-	// 			</Link>
-	// 		</div>
-	// 	);
-	// }
+	if (store.usuarioconectado == 1) {
+		return (
+			<div className="btn-group ml-auto" role="group" aria-label="Basic example">
+				<button type="button" className="btn btn-danger">
+					Logout
+				</button>
+				<Link to="/profile">
+					<button type="button" className="btn btn-success">
+						Profile
+					</button>
+				</Link>
+			</div>
+		);
+	} else {
+		return (
+			<div className="ml-auto">
+				<button className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+					Login
+				</button>
+				<LoginForm />
+			</div>
+		);
+	}
 };
