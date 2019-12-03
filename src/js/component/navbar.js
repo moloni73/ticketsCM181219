@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 import "../../styles/modal.scss";
+import { loginButton } from "./loginbutton";
 
 export const Navbar = () => {
+	let usuario = "";
+	let pass = "";
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -116,6 +120,8 @@ export const Navbar = () => {
 					<button className="btn btn-primary">Profile</button>
 				</Link>
 			</div>
+
+			<loginButton />
 		</nav>
 	);
 };

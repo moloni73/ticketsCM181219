@@ -1,6 +1,18 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			usuario: [
+				{
+					nombre: "Ivan Muñoz",
+					email: "munoz.romero.ivan@gmail.com",
+					password: "1234abc"
+				}
+			],
+
+			usuarioconectado: [{ conectado: true }],
+
+			userLogin: [{ email: "" }],
+			userPass: [{ pass: "" }],
 			demo: [
 				{
 					title: "FIRST",
@@ -235,6 +247,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+
+			evaluaLogin: (usuario, pass) => {
+				const store = getStore();
+
+				const baseUsuario = store.usuario;
+				const usuarioConectado = true;
+
+				if ((baseUsuario.email == usuario) & (baseUsuario.password == pass)) {
+					setStore({ usuarioconectado: usuarioConectado });
+				}
 			}
 		}
 	};
