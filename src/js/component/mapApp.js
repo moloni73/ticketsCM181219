@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withGoogleMap, withScriptjs, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 import * as comunaData from "../../data/chile_with_regions.json";
 import mapStyles from "../../data/mapStyles.js";
+import { Context } from "../store/appContext.js";
 
 function Map() {
 	const [selectedComuna, setSelectedComuna] = useState(null);
@@ -20,42 +21,53 @@ function Map() {
 	}, []);
 
 	return (
-		<GoogleMap
-			defaultZoom={10}
-			defaultCenter={{ lat: -33.448891, lng: -70.669266 }}
-			defaultOptions={{ styles: mapStyles }}>
-			{comunaData.Metropolitana.map((comunaM, index) => (
-				<Marker
-					key={index}
-					position={{
-						lat: Number(comunaM.lat),
-						lng: Number(comunaM.lng)
-					}}
-					onClick={() => {
-						setSelectedComuna(comunaM);
-					}}
-					/*icon={{
-						url: `/skateboarding.svg`,
-						scaledSize: new window.google.maps.Size(25, 25)
-					}} Para cambiar el icono del marcador*/
-				/>
-			))}
-			{selectedComuna && (
-				<InfoWindow
-					onCloseClick={() => {
-						setSelectedComuna(null);
-					}}
-					position={{
-						lat: Number(selectedComuna.lat),
-						lng: Number(selectedComuna.lng)
-					}}>
-					<div>
-						<h2>{selectedComuna.name}</h2>
-						<p>Hora del Evento</p>
-					</div>
-				</InfoWindow>
-			)}
-		</GoogleMap>
+		<div className="container">
+			<Context.Consumer>
+				{({ store, actions }) => {
+					return (
+						<GoogleMap
+							defaultZoom={15}
+							defaultCenter={{
+								lat: Number(store.geomap.coords.latitude),
+								lng: Number(store.geomap.coords.longitude)
+							}}
+							defaultOptions={{ styles: mapStyles }}>
+							{comunaData.Metropolitana.map((comunaM, index) => (
+								<Marker
+									key={index}
+									position={{
+										lat: Number(comunaM.lat),
+										lng: Number(comunaM.lng)
+									}}
+									onClick={() => {
+										setSelectedComuna(comunaM);
+									}}
+									/*icon={{
+                    url: `/skateboarding.svg`,
+                    scaledSize: new window.google.maps.Size(25, 25)
+                }} Para cambiar el icono del marcador*/
+								/>
+							))}
+							{selectedComuna && (
+								<InfoWindow
+									onCloseClick={() => {
+										setSelectedComuna(null);
+									}}
+									position={{
+										lat: Number(selectedComuna.lat),
+										lng: Number(selectedComuna.lng)
+									}}>
+									<div>
+										<h2>{selectedComuna.name}</h2>
+										<p>Hora del Evento</p>
+									</div>
+								</InfoWindow>
+							)}
+						</GoogleMap>
+					);
+				}}
+			</Context.Consumer>
+		</div>
 	);
 }
 

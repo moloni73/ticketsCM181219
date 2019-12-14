@@ -8,6 +8,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 					password: "1234abc"
 				}
 			],
+			geomap: {
+				locationState: "LOADING",
+				error: null,
+				coords: {
+					latitude: -33.448891,
+					longitude: -70.669266,
+					altitude: null,
+					accuracy: null,
+					altitudeAccuracy: null,
+					heading: null,
+					speed: null
+				}
+			},
 
 			usuarioconectado: true,
 
@@ -267,6 +280,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ usuarioconectado: false });
 				} else {
 					setStore({ usuarioconectado: true });
+				}
+			},
+
+			getCurrentPosition: (options = {}) => {
+				return new Promise((resolve, reject) => {
+					navigator.geolocation.getCurrentPosition(resolve, reject, options);
+				});
+			},
+			loadLocation: async () => {
+				try {
+					const position = await getActions().getCurrentPosition();
+					let newgeomap = { coords: position.coords, locationState: "SUCCESS" };
+					const store = getStore();
+					setStore({ geomap: newgeomap });
+				} catch (e) {
+					let newgeomap = { locationState: "ERROR", error: e.message };
+					setStore({ geomap: newgeomap });
 				}
 			}
 		}
