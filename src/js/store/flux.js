@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 
-			usuarioconectado: [1],
+			usuarioconectado: true,
 
 			userLogin: [{ email: "" }],
 			userPass: [{ pass: "" }],
@@ -257,6 +257,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				if ((baseUsuario.email == usuario) & (baseUsuario.password == pass)) {
 					setStore({ usuarioconectado: usuarioConectado });
+				}
+			},
+
+			changeUserStatus: () => {
+				const store = getStore();
+
+				if (store.usuarioconectado == true) {
+					setStore({ usuarioconectado: false });
+				} else {
+					setStore({ usuarioconectado: true });
 				}
 			}
 		}

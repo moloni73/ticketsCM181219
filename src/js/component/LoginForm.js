@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { Context } from "../store/appContext";
 
 export const LoginForm = () => {
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div
 			className="modal fade"
@@ -56,7 +59,12 @@ export const LoginForm = () => {
 											placeholder="Contraseña"
 											required
 										/>
-										<input type="submit" value="Login" />
+										<input
+											type="submit"
+											value="Login"
+											onClick={actions.changeUserStatus}
+											data-dismiss="modal"
+										/>
 									</div>
 								</div>
 							</form>
