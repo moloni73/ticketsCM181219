@@ -65,11 +65,13 @@ export const LoginForm = () => {
 													Ingresar
 												</button>
 												<div className="text-center">o</div>
-												<button
-													className="btn btn-lg btn-success btn-block text-uppercase"
-													type="submit">
-													Registrarse
-												</button>
+												<Link to="/register">
+													<button
+														className="btn btn-lg btn-success btn-block text-uppercase"
+														type="submit">
+														Registrarse
+													</button>
+												</Link>
 												<hr className="my-4" />
 												<button
 													className="btn btn-lg btn-facebook btn-block text-uppercase"
